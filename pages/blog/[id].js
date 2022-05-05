@@ -11,6 +11,7 @@ export default function BlogId({ blog }) {
             __html: `${blog.body}`
           }}
         />
+        <p>test</p>
       </div>
     </div>
   )
