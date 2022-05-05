@@ -12,6 +12,7 @@ export default function BlogId({ blog }) {
           }}
         />
         <p>test</p>
+        <p>test2</p>
       </div>
     </div>
   )
