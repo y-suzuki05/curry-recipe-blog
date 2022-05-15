@@ -8,9 +8,9 @@ export default function BlogId({ blog }) {
       <Header />
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-md px-4 md:px-8 mx-auto">
-          <h1 className="text-gray-800">{blog.title}</h1>
+          <h1 className="text-gray-800 text-3xl mb-4">{blog.title}</h1>
           <p>{blog.publishedAt}</p>
-          <p>{blog.category && `${blog.category.name}`}</p>
+          <p className="mb-4">{blog.category && `${blog.category.name}`}</p>
           <div
             dangerouslySetInnerHTML={{
               __html: `${blog.body}`
