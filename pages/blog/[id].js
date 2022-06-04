@@ -1,6 +1,7 @@
 import { client } from "../../libs/client";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import Date from "../../components/date";
 
 export default function BlogId({ blog }) {
   return (
@@ -9,8 +10,9 @@ export default function BlogId({ blog }) {
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-md px-4 md:px-8 mx-auto">
           <h1 className="text-gray-800 text-3xl mb-4">{blog.title}</h1>
-          <p>{blog.publishedAt}</p>
+          <Date dateString={blog.publishedAt} className="mb-4" />
           <p className="mb-4">{blog.category && `${blog.category.name}`}</p>
+          <img src={ blog.thumbnail.url } alt="" className="mb-4" />
           <div
             dangerouslySetInnerHTML={{
               __html: `${blog.body}`
