@@ -11,9 +11,9 @@ export default function Home({ blog }) {
         {blog.map((blog) =>  (
           <li key={blog.id} className="mb-12">
             <Link href={`/blog/${blog.id}`}>
-              <a className="flex hover:opacity-50">
-                <img src={ blog.thumbnail.url } alt="" className="w-1/2 h-40 object-contain" />
-                <div className="ml-1.5">
+              <a className="lg:flex hover:opacity-50">
+                <img src={ blog.thumbnail.url } alt="" className="w-full lg:w-1/2 h-40 object-contain" />
+                <div className="lg:ml-1.5 mt-5">
                   <p className="text-lg font-bold mb-1">
                     { blog.title }
                   </p>
